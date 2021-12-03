@@ -17,13 +17,13 @@ def get_data(id=None):
 
 
 # get_data()
-def post_data():
-    data = {
-        'name': 'amar',
-        'roll': 104,
-        'city': 'delhi'
-
-    }
+def post_data(data):
+    # data = {
+    #     'name': 'amar',
+    #     'roll': 104,
+    #     'city': 'delhi'
+    #
+    # }
     json_data = json.dumps(data)
     r = requests.post(url=URL, data=json_data, verify=False)
     data = r.json()
