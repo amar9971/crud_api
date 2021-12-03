@@ -1,8 +1,8 @@
 from django.db import models
 
+
 # Create your modes here.
 class Student(models.Model):
-     name = models.CharField(max_length=100)
-     roll = models.IntegerField()
-     city = models.CharField(max_length=100)
-
+    name = models.CharField(max_length=100)
+    roll = models.IntegerField()
+    city = models.CharField(max_length=100)
