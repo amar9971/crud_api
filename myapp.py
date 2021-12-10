@@ -6,7 +6,7 @@ URL = "http://127.0.0.1:8000/studentapi/"
 
 
 def get_data(id=None):
-    data = {}
+    data = { }
     if id is not None:
         data = {'id': id}
     json_data = json.dumps(data)
@@ -16,7 +16,7 @@ def get_data(id=None):
     print(data)
 
 
-# get_data()
+get_data()
 def post_data(data):
     # data = {
     #     'name': 'amar',
@@ -31,3 +31,24 @@ def post_data(data):
 
 
 post_data()
+def update_data(data):
+     # data = {
+     #    'id' :4,
+     #     'name': 'raju',
+     #     'roll': 444,
+     #     'city': 'dddd'
+     #
+     # }
+     json_data = json.dumps(data)
+     r = requests.put(url=URL, data=json_data)
+     data = r.json()
+     print(data)
+update_data()
+
+def  delete_data(data):
+     #data = {'id' :8 }
+     json_data = json.dumps(data)
+     r = requests.delete(url=URL, data=json_data)
+     data = r.json()
+     print(data)
+delete_data()
